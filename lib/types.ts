@@ -26,4 +26,5 @@ export type RadioGroupProps = {
   radioMainView?: object;
   borderColor?: string;
   color?: string;
+  size?: number;
 };
