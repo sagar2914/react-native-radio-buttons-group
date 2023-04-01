@@ -6,7 +6,7 @@ import RadioButton from './RadioButton';
 import { RadioButtonProps, RadioGroupProps } from './types';
 
 export default function RadioGroup({ containerStyle, layout = 'column', onPress, radioButtons, labelStyle,
-  descriptionStyle, radioMainView, borderColor, color }: RadioGroupProps) {
+  descriptionStyle, radioMainView, borderColor, color, size }: RadioGroupProps) {
 
   const [radioButtonsLocal, setRadioButtonsLocal] = useState<RadioButtonProps[]>(radioButtons);
 
@@ -36,6 +36,7 @@ export default function RadioGroup({ containerStyle, layout = 'column', onPress,
             color={color}
             descriptionStyle={descriptionStyle}
             key={button.id}
+            size={size}
             onPress={(id: string) => {
               handlePress(id);
               if (button.onPress && typeof button.onPress === 'function') {
