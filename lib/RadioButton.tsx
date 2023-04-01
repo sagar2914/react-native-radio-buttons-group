@@ -55,7 +55,7 @@ export default function RadioButton({
           style={[
             styles.border,
             {
-              borderColor: borderColor || color,
+              borderColor: selected ? color : borderColor || color,
               borderWidth,
               width: sizeFull,
               height: sizeFull,
